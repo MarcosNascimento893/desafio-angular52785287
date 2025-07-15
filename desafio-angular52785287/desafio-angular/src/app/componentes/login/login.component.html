@@ -12,6 +12,8 @@
               <img src="ford.png" alt="Logo Ford">
           </header>
           <h1 class="boasvin_das">Boas-Vindas</h1>
+<form [formGroup]="formLogin" (ngSubmit)="onSubmit()" >
+
 
           <div class="form-center">
               <div class="input-group mb-3">
@@ -20,7 +22,7 @@
                           <img src="do-utilizador.png" alt="Ícone de usuário">
                       </div>
                   </div>
-                  <input type="email" class="form-control" placeholder="Insira seu e-mail" required>
+                  <input type="text" class="form-control" placeholder="Insira seu nome" formControlName="nome">
               </div>
 
               <div class="input-group">
@@ -29,10 +31,10 @@
                           <img src="trancar.png" alt="Ícone de senha">
                       </div>
                   </div>
-                  <input type="password" class="form-control" placeholder="Insira sua senha" required>
+                  <input type="password" class="form-control" placeholder="Insira sua senha" formControlName="senha">
               </div>
           </div>
-
-          <button class="btn-login">Entrar</button>
+</form>
+          <button type="submit" class="btn-login">Entrar</button>
       </section>
   </main>

@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor( private fb: FormBuilder,
     private loginService: LoginService,
-    private router: Router,) {}
+    private router: Router) {}
 
   ngOnInit(): void {
     
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
     this.loginService.login(nome, senha).subscribe({
       next: (response) => {
-        this.router.navigate(['/welcome']);
+        this.router.navigate(['/home']);
       },
       error: (error) => {
         console.error('Login failed', error);
