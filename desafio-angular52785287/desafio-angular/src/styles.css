@@ -1,0 +1,83 @@
+
+body.offcanvas-open {
+  overflow: hidden;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1050;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar .menu-item {
+  padding: 12px 20px;
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  border-left: 2px solid transparent;
+}
+
+.sidebar .menu-item:hover {
+  background-color: #f8f9fa;
+  border-left: 2px solid red;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: green;
+  margin: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+}
+
+.content {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.card-custom {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.img-ford-ajuste{
+  width: 120px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  padding-top: 5px;
+
+}
+
+
+.px-3.py-3.border-bottom{
+  display: flex;
+  justify-content: right;
+}

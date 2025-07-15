@@ -1,0 +1,12 @@
+
+
+<div class="sidebar-overlay" *ngIf="isSidebarOpen" (click)="closeSidebar()"></div>
+
+<div class="sidebar" [class.active]="isSidebarOpen">
+  <div class="px-3 py-3 border-bottom">
+    <img src="assets/img/ford.png" alt="Logo Ford">
+  </div>
+  <a routerLink="/home" class="menu-item">Home</a>
+  <a routerLink="/dashboard" class="menu-item">Dashboard</a>
+</div>
+

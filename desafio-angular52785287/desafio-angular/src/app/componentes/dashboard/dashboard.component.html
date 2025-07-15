@@ -1,0 +1,84 @@
+<header>
+    <button class="hamburger-btn" (click)="toggleSidebar()">
+      ☰
+    </button>
+
+    <div #sidebarOverlay class="sidebar-overlay" (click)="closeSidebar()"></div>
+
+    <div #sidebar class="sidebar">
+      <div class="px-3 py-3 border-bottom">
+        <strong class="text-dark"><img src="ford.png" alt=""  class="img-ford-ajuste"></strong>
+      </div>
+      <a href="/desafio-angular/src/app/componentes/home/" class="menu-item">Home</a>
+      <a href="/desafio-angular/src/app/componentes/dashboard/" class="menu-item">Dashboard</a>
+    </div>
+
+    <div class="texto_inicial">
+      <h1>Dashboard FORD</h1>
+   </div>
+   
+</header>
+
+  <main>
+     <div class="ajustes-avisos">
+        <div class="avisos_dashboard">
+          <p class="ajuste_p" style="color: black">Veículos</p>
+          <hr>
+
+          <form [formGroup]="selectCarForms" >
+
+            <select formControlName="carId"  style="margin-left: 49px" class="select">
+              <option *ngFor="let vehicle of vehicles" [value]="vehicle.id">
+              {{ vehicle.vehicle }}
+            </option>
+          </select>
+          </form>
+
+        </div>
+
+        <div class="avisos_dashboard">
+          <div class="cor-titulo-aviso">
+            <p class="ajuste_p" style="color: black"> Total de Vendas</p>
+          </div>
+          <hr>
+          <p style="color:#2196F3"> {{selectedVehicle.volumetotal}}</p>
+          <p style="color: black"> Unid.</p>
+        </div>
+
+        <div class="avisos_dashboard">
+          <p class="ajuste_p" style="color: black">Conectados</p>
+          <hr>
+          <p style="color:#2196F3"> {{selectedVehicle.connected}}</p>
+          <p style="color: black"> Unid.</p>
+        </div>
+
+        <div class="avisos_dashboard">
+          <p class="ajuste_p" style="color: black">Update Software</p>
+          <hr>
+          <p style="color: #2196F3">{{selectedVehicle.softwareUpdates}}</p>
+          <p style="color: black"> Unid.</p>
+        </div>
+     </div>
+     <img  class="img_alternada" src="{{selectedVehicle.img}}" alt="">
+  </main>
+
+  <footer>
+    <table>
+      <tr>
+         <th class="ajustando_tabela_footer"> Código - Vin </th>
+         <th class="ajustando_tabela_footer"> Odômetro </th>
+         <th class="ajustando_tabela_footer"> Nível de Combustível </th>
+         <th class="ajustando_tabela_footer"> Status </th>
+         <th class="ajustando_tabela_footer"> Lat. </th>
+         <th class="ajustando_tabela_footer"> Long. </th>
+      </tr>
+      <tr>
+        <td class="ajustando_cor_footer">9FBRD4KB7RZB47674</td>
+        <td class="ajustando_cor_footer">50000 Km</td>
+        <td class="ajustando_cor_footer">90%</td>
+        <td class="ajustando_cor_footer">on</td>
+        <td class="ajustando_cor_footer">-12.2222</td>
+        <td class="ajustando_cor_footer">-35.2314</td>
+      </tr>
+    </table>
+  </footer>

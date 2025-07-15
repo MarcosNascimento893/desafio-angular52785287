@@ -1,0 +1,46 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main_ordenado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../../../public/ranger.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.aviso_principal{
+  color: rgb(0, 102, 255);
+  justify-content: center;
+  border: 2px solid black;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  opacity: 90%;
+  padding: 1%;
+  background-size: 5px;
+  border-radius: 2%;
+}
+.menu-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1050;
+  background-color: transparent;
+  border: none;
+}
+.menu-icon {
+  font-size: 30px;
+  color: green;
+  line-height: 1;
+}
+.offcanvas-body a {
+  color: green;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}

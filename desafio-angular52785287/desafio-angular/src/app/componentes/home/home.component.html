@@ -1,0 +1,24 @@
+<header>
+    <button class="hamburger-btn" (click)="toggleSidebar()">
+      ☰
+    </button>
+
+    <div #sidebarOverlay class="sidebar-overlay" (click)="closeSidebar()"></div>
+
+    <div #sidebar class="sidebar">
+      <div class="px-3 py-3 border-bottom">
+        <strong class="text-dark"><img src="ford.png" alt=""  class="img-ford-ajuste"></strong>
+      </div>
+      <a href="/desafio-angular/src/app/componentes/home/" class="menu-item">Home</a>
+      <a href="/desafio-angular/src/app/componentes/dashboard/" class="menu-item">Dashboard</a>
+    </div>
+
+</header>
+
+  <main class="main_ordenado">
+      <div class="aviso_principal">
+          <p style="color: black">Sistema de Dados FORD</p>
+          <hr>
+          <p style="color: rgb(0, 102, 255)">Seja Bem-Vindo(a) !</p>
+      </div>
+  </main>
